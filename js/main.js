@@ -1,7 +1,52 @@
-let ProjectHeading = document.createElement("h1")
-ProjectHeading.innerHTML = "By: Ayman Mohammad"
-document.body.appendChild(ProjectHeading)
 
+let header = document.createElement("div")
+header.classList.add("header")
+document.body.appendChild(header)
+
+let themeHolder = document.createElement("div")
+themeHolder.classList.add("theme-box")
+header.appendChild(themeHolder)
+///////////////////
+let theme1 =  document.createElement("div")
+theme1.classList.add("theme","theme1")
+theme1.setAttribute("data-color","#fff")
+themeHolder.appendChild(theme1)
+theme1.style.backgroundColor = theme1.dataset.color
+
+let theme2 =  document.createElement("div")
+theme2.classList.add("theme","theme2")
+theme2.setAttribute("data-color","#0075ff")
+themeHolder.appendChild(theme2)
+theme2.style.backgroundColor = theme2.dataset.color
+
+let theme3 =  document.createElement("div")
+theme3.classList.add("theme","theme3")
+theme3.setAttribute("data-color","#676767")
+themeHolder.appendChild(theme3)
+theme3.style.backgroundColor = theme3.dataset.color
+
+let theme4 =  document.createElement("div")
+theme4.classList.add("theme","theme3")
+theme4.setAttribute("data-color","#101010")
+themeHolder.appendChild(theme4)
+theme4.style.backgroundColor = theme4.dataset.color
+
+let themeArr = []
+themeArr.push(theme1)
+themeArr.push(theme2)
+themeArr.push(theme3)
+themeArr.push(theme4)
+
+themeArr.forEach(theme => {
+  theme.onclick = function () {
+    document.body.style.backgroundColor = theme.dataset.color
+  }
+});
+///////////////////
+
+
+
+///////////////////
 let req = new XMLHttpRequest();
 req.open("GET", "all.json")
 req.send()
@@ -86,11 +131,7 @@ req.onreadystatechange = function () {
   }
 }
 
-
-
-
-
-
+// theme.dataset.color
 
 // let mainText = document.querySelector(".main-text");
 // let achievements = document.querySelector(".achievements");
