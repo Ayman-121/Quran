@@ -96,13 +96,28 @@
 .number{
   color: red;
 }
+h1.my-name{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9E9E9E;
+}
+@media (max-width:590px) {
+  .header{
+    display: grid !important;
+    justify-content: center;
+    align-items: center;
+  }
+  h1.my-name{
 
+  }
+}
 .header{
   background-color: #ddd;
   padding: 10px 20px;
   border-radius: 0 0 10px 10px;
   position: fixed;
-  width: calc(100% - 230px);
+  width: calc(100% - 254px);
   display: flex;
   justify-content: space-between;
   top: 0;
@@ -113,21 +128,6 @@
   .theme-box{
     display: flex;
     margin-left: 30px;
-    &:hover{
-      &::before{
-        content: "These Are The Themes";
-        position: absolute;
-        top: 50%;
-        left: 39.5%;
-        transform: translateX(-50%);
-        font-size: 15px;
-        background-color: gray;
-        padding: 5px 10px;
-        border-radius: 20px;
-        color: #fff;
-        opacity: 0.4;
-      }
-    }
     .theme{
       margin: 10px;
       padding: 10px;

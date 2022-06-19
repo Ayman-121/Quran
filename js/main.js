@@ -44,7 +44,10 @@ themeArr.forEach(theme => {
 });
 ///////////////////
 
-
+let myName = document.createElement("h1")
+myName.classList.add("my-name")
+myName.innerHTML = "By:Ayman"
+header.appendChild(myName)
 
 ///////////////////
 let req = new XMLHttpRequest();
